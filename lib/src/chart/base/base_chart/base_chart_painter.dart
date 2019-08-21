@@ -25,11 +25,13 @@ abstract class BaseChartPainter<D extends BaseChartData> extends CustomPainter {
   /// in form of a [BaseTouchResponse]
   StreamSink<BaseTouchResponse> touchedResponseSink;
 
-  BaseChartPainter(this.data, {this.touchInputNotifier, this.touchedResponseSink}):
+  BaseChartPainter(this.data, {this.touchInputNotifier}):
       super(repaint: data.touchData.enabled ? touchInputNotifier : null) {
 
     borderPaint = Paint()
       ..style = PaintingStyle.stroke;
+
+    touchedResponseSink = data.touchData.touchResponseSink;
   }
 
   @override

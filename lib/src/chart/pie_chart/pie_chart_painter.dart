@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:fl_chart/fl_chart.dart';
@@ -24,8 +23,7 @@ class PieChartPainter extends BaseChartPainter {
   PieChartPainter(
     this.data,
     FlTouchInputNotifier touchInputNotifier,
-    StreamSink<PieTouchResponse> touchedResultSink,
-  ) : super(data, touchInputNotifier: touchInputNotifier, touchedResponseSink: touchedResultSink) {
+  ) : super(data, touchInputNotifier: touchInputNotifier) {
     sectionPaint = Paint()
       ..style = PaintingStyle.stroke;
 

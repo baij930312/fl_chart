@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:ui' as ui;
 
 import 'package:fl_chart/fl_chart.dart';
@@ -27,8 +26,7 @@ class LineChartPainter extends AxisChartPainter {
   LineChartPainter(
     this.data,
     FlTouchInputNotifier touchInputNotifier,
-    StreamSink<LineTouchResponse> touchedResponseSink,
-  ) : super(data, touchInputNotifier: touchInputNotifier, touchedResponseSink: touchedResponseSink) {
+  ) : super(data, touchInputNotifier: touchInputNotifier) {
 
     barPaint = Paint()
       ..style = PaintingStyle.stroke;

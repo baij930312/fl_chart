@@ -80,7 +80,6 @@ class _FlChartState extends State<FlChart> {
       child: CustomPaint(
         painter: widget.chart.painter(
           touchInputNotifier: _touchInputNotifier,
-          touchResponseSink: widget.chart.getData().touchData.touchResponseSink,
         ),
       ),
     );
