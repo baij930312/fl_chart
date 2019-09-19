@@ -65,15 +65,15 @@ class _FlChartState extends State<FlChart> {
         _touchInputNotifier.value = FlLongPressMoveUpdate(d.localPosition);
       },
       onPanCancel: () async {
-        // _touchInputNotifier.value = FlPanEnd(Offset.zero);
-        // _releaseTouch();
+        _touchInputNotifier.value = FlPanEnd(Offset.zero);
+        _releaseTouch();
       },
       onPanEnd: (DragEndDetails details) async {
-        // _touchInputNotifier.value = FlPanEnd(Offset.zero);
-        // _releaseTouch();
+        _touchInputNotifier.value = FlPanEnd(Offset.zero);
+        _releaseTouch();
       },
       onPanDown: (DragDownDetails details) {
-        // _touchInputNotifier.value = FlPanStart(details.localPosition);
+        _touchInputNotifier.value = FlPanStart(details.localPosition);
       },
       onPanUpdate: (DragUpdateDetails details) {
         // _touchInputNotifier.value = FlPanMoveUpdate(details.localPosition);
