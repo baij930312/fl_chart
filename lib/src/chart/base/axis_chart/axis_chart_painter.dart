@@ -193,7 +193,7 @@ abstract class AxisChartPainter<D extends AxisChartData>
         bottomLeft: radius,
         bottomRight: radius);
     bgTouchTooltipPaint.color = tooltipData.tooltipBgColor;
-    canvas.drawRRect(roundedRect, bgTouchTooltipPaint);
+    // canvas.drawRRect(roundedRect, bgTouchTooltipPaint);
 
     /// draw the texts one by one in below of each other
     double topPosSeek = tooltipData.tooltipPadding.top;
@@ -202,7 +202,7 @@ abstract class AxisChartPainter<D extends AxisChartData>
         rect.center.dx - (tp.width / 2),
         rect.topCenter.dy + topPosSeek,
       );
-      tp.paint(canvas, drawOffset);
+      // tp.paint(canvas, drawOffset);
       topPosSeek += tp.height;
       topPosSeek += textsBelowMargin;
     }
