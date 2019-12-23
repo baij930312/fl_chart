@@ -58,7 +58,7 @@ class _FlChartState extends State<FlChart> {
         _touchInputNotifier.value = FlLongPressStart(d.localPosition);
       },
       onLongPressEnd: (d) async {
-        _touchInputNotifier.value = FlLongPressEnd(d.localPosition);
+        _touchInputNotifier.value = FlLongPressEnd(Offset.zero);
         _releaseTouch();
       },
       onLongPressMoveUpdate: (d) {
@@ -94,7 +94,7 @@ class _FlChartState extends State<FlChart> {
     // then the chart again puts the new touchResult inside the touchResponseSink,
     // and it got stuck in a loop, now we pass a NonTouch to break the loop
     // Todo: we should find a better way to handle it
-    Future<dynamic>.delayed(Duration(milliseconds: 100)).then((dynamic s) {
+    Future<dynamic>.delayed(const Duration(milliseconds: 100)).then((dynamic s) {
       _touchInputNotifier.value = NonTouch();
     });
   }
